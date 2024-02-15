@@ -13,3 +13,4 @@ class TestLogin:
         login_page.enter_email("aeiou123@gmail.com")
         login_page.enter_password("Abc123!@#")
         login_page.click_on_login_button()
+        assert login_page.verify_my_profile_page_is_loaded() == "My Account", "Login not successful"
