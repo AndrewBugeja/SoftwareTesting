@@ -24,3 +24,9 @@ class LoginPage(Base):
     def click_on_login_button(self):
         time.sleep(3)
         self.wait_and_get_element(By.CSS_SELECTOR, '#form_submit').click()
+
+    def verify_my_profile_page_is_loaded(self):
+        time.sleep(3)
+        account_link = self.wait_and_get_element(By.CLASS_NAME, "account-link")
+        time.sleep(3)
+        return account_link.text
